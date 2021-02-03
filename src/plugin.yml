@@ -3,6 +3,6 @@ author: nerotvlive
 website: https://www.nerotv.de/knockit
 
 main: de.nerotvlive.knockit.Main
-version: 0.1.0
+version: 0.1.1
 
 commands:

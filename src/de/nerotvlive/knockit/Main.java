@@ -8,7 +8,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
-    public static String Prefix = "§9KnockIT §8| §7";
+    public static String ConsolePrefix = "§9KnockIT §8| §7";
 
     @Override
     public void onEnable() {
@@ -22,7 +22,9 @@ public class Main extends JavaPlugin {
     public void onDisable() {
         if(API.enableMySQL()) {
             ServerAPI.sendDebugMessage("Disconnecting from MySQL...");
-            MySQL.disconnect();
+            if(MySQL.isConnected()) {
+                MySQL.disconnect();
+            }
         }
     }
 
@@ -35,10 +37,19 @@ public class Main extends JavaPlugin {
         ConfigAPI.checkEntry("Settings.MySQL.Database","KnockIT",ConfigAPI.Config,ConfigAPI.CFG);
         ConfigAPI.checkEntry("Settings.MySQL.Username","username",ConfigAPI.Config,ConfigAPI.CFG);
         ConfigAPI.checkEntry("Settings.MySQL.Password","password",ConfigAPI.Config,ConfigAPI.CFG);
+        ConfigAPI.checkEntry("Messages.JoinMessage","&8>> &9%player% &7joined the server&8.",ConfigAPI.Messages,ConfigAPI.MSG);
+        ConfigAPI.checkEntry("Messages.QuitMessage","&8>> &9%player% &7left the server&8.",ConfigAPI.Messages,ConfigAPI.MSG);
+        ConfigAPI.checkEntry("Messages.NoPermissions","&8>> &cYou aren't allowed to do that&8.",ConfigAPI.Messages,ConfigAPI.MSG);
     }
 
     void initMySQL() {
         ServerAPI.sendConsoleMessage("Trying to connect to the MySQL database...");
-        MySQL.connect();
+        if(!(MySQL.isConnected())) {
+            MySQL.connect();
+        }
+        ServerAPI.sendConsoleMessage("Successfully connected to the MySQL Database");
+        if(MySQL.isConnected()) {
+            MySQL.disconnect();
+        }
     }
 }
