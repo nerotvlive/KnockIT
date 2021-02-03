@@ -16,6 +16,8 @@ public class MySQL {
     public static String password = ConfigAPI.CFG.getString("Settings.MySQL.Password");
     public static Connection con;
 
+    //slkjfjlksdöghjdsfjklghnkfj
+
     static ConsoleCommandSender console = Bukkit.getConsoleSender();
 
     public static void connect() {
