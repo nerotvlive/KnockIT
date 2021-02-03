@@ -30,14 +30,7 @@ public class Main extends JavaPlugin {
 
     void initConfig() {
         ServerAPI.sendConsoleMessage("Checking config files...");
-        ConfigAPI.checkEntry("Settings.Console.doDebug",false,ConfigAPI.Config,ConfigAPI.CFG);
-        ConfigAPI.checkEntry("Settings.MySQL.enable",false,ConfigAPI.Config,ConfigAPI.CFG);
-        ConfigAPI.checkEntry("Settings.MySQL.Host","localhost",ConfigAPI.Config,ConfigAPI.CFG);
-        ConfigAPI.checkEntry("Settings.MySQL.Port","3306",ConfigAPI.Config,ConfigAPI.CFG);
-        ConfigAPI.checkEntry("Settings.MySQL.Database","KnockIT",ConfigAPI.Config,ConfigAPI.CFG);
-        ConfigAPI.checkEntry("Settings.MySQL.Username","username",ConfigAPI.Config,ConfigAPI.CFG);
-        ConfigAPI.checkEntry("Settings.MySQL.Password","password",ConfigAPI.Config,ConfigAPI.CFG);
-        ConfigAPI.checkEntry("Settings.MessageSounds.enable",false,ConfigAPI.Config,ConfigAPI.CFG);
+        de.nerotvlive.owncorelite.api.Main.initConfig();
         ConfigAPI.checkEntry("Messages.General.Prefix","&9KnockIT &8>> &7",ConfigAPI.Messages,ConfigAPI.MSG);
         ConfigAPI.checkEntry("Messages.General.JoinMessage","&8>> &9%player% &7joined the server&8.",ConfigAPI.Messages,ConfigAPI.MSG);
         ConfigAPI.checkEntry("Messages.General.QuitMessage","&8>> &9%player% &7left the server&8.",ConfigAPI.Messages,ConfigAPI.MSG);

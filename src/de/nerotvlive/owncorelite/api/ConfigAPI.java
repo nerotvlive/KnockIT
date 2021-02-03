@@ -1,5 +1,6 @@
 package de.nerotvlive.owncorelite.api;
 
+import de.nerotvlive.knockit.Main;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
 import java.io.File;
@@ -10,15 +11,20 @@ public class ConfigAPI {
     //OWNCORELITE VERSION: BETA 1.0.0
     //AUTHOR: NEROTVLIVE
 
-    public static File Config = new File("plugins/KnockIT/config.yml");
+    private static Main MAIN;
+    public ConfigAPI(final Main main) {
+        this.MAIN = main;
+    }
+
+    public static File Config = new File("plugins/"+MAIN.getDescription().getName()+"/config.yml");
     public static YamlConfiguration CFG = YamlConfiguration.loadConfiguration(Config);
 
-    public static File Messages = new File("plugins/KnockIT/messages.yml");
+    public static File Messages = new File("plugins/"+MAIN.getDescription().getName()+"/messages.yml");
     public static YamlConfiguration MSG = YamlConfiguration.loadConfiguration(Messages);
 
     public static File PlayerCFG(Player player) {
         ServerAPI.sendDebugMessage("Creating/Getting userfile of "+player.getUniqueId()+" ("+player.getName()+") 1/2");
-        return new File("plugins/KnockIT/users/"+player.getUniqueId()+".yml");
+        return new File("plugins/"+MAIN.getDescription().getName()+"/users/"+player.getUniqueId()+".yml");
     }
     public static YamlConfiguration PCFG(Player player) {
         ServerAPI.sendDebugMessage("Creating/Getting userfile of "+player.getUniqueId()+" ("+player.getName()+") 2/2");

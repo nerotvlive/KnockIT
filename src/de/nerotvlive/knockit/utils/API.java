@@ -7,7 +7,10 @@ import org.bukkit.entity.Player;
 
 public class API {
 
-    //
+    //GET THE PREFIX
+    public static String Prefix = ServerAPI.formatMessage(ConfigAPI.MSG.getString("Messages.General.Prefix"));
+
+    //MESSAGE FOR CONSOLES THAT NEED TO BE AN USER
     public static String MBPlayer = ServerAPI.formatMessage(ConfigAPI.MSG.getString("Messages.General.ConsolePlayerError"));
 
     //AUTO FORMATTED NO PERMS STRING
