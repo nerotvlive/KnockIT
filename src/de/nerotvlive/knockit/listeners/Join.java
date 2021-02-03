@@ -12,6 +12,6 @@ public class Join implements Listener {
     @EventHandler
     public void onJoin(PlayerJoinEvent e) {
         Player p = e.getPlayer();
-        e.setJoinMessage(ServerAPI.formatMessage(ConfigAPI.MSG.getString("Messages.JoinMessage".replace("%player%",p.getName()))));
+        e.setJoinMessage(ServerAPI.formatMessage(ConfigAPI.MSG.getString("Messages.General.JoinMessage".replace("%player%",p.getName()))));
     }
 }

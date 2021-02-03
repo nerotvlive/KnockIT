@@ -12,6 +12,6 @@ public class Quit implements Listener {
     @EventHandler
     public void onQuit(PlayerQuitEvent e) {
         Player p = e.getPlayer();
-        e.setQuitMessage(ServerAPI.formatMessage(ConfigAPI.MSG.getString("Messages.QuitMessage".replace("%player%",p.getName()))));
+        e.setQuitMessage(ServerAPI.formatMessage(ConfigAPI.MSG.getString("Messages.General.QuitMessage".replace("%player%",p.getName()))));
     }
 }

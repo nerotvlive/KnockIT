@@ -10,6 +10,7 @@ import org.bukkit.command.ConsoleCommandSender;
 public class MySQL {
 
     //MYSQL CLASS FROM VERSION 0.1.1 / 03.02.2021
+    //AUTHOR: NEROTVLIVE
 
     public static String host = ConfigAPI.CFG.getString("Settings.MySQL.Host");
     public static String port = ConfigAPI.CFG.getString("Settings.MySQL.Port");

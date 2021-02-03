@@ -2,11 +2,16 @@ package de.nerotvlive.knockit.utils;
 
 import de.nerotvlive.owncorelite.api.ConfigAPI;
 import de.nerotvlive.owncorelite.api.ServerAPI;
+import org.bukkit.Sound;
+import org.bukkit.entity.Player;
 
 public class API {
 
+    //
+    public static String MBPlayer = ServerAPI.formatMessage(ConfigAPI.MSG.getString("Messages.General.ConsolePlayerError"));
+
     //AUTO FORMATTED NO PERMS STRING
-    public static String NoPerms = ServerAPI.formatMessage(ConfigAPI.MSG.getString("Messages.NoPermissions"));
+    public static String NoPerms = ServerAPI.formatMessage(ConfigAPI.MSG.getString("Messages.General.NoPermissions"));
 
     //TO CHECK IF MYSQL IS ENABLED
     public static Boolean enableMySQL() {
@@ -18,6 +23,12 @@ public class API {
         } else {
             ServerAPI.sendDebugMessage("MySQL is disabled!");
             return false;
+        }
+    }
+
+    public static void sendPlayerMessage(Player player, String message, Sound sound) {
+        if(ConfigAPI.CFG.getBoolean("")) {
+
         }
     }
 }

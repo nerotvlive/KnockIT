@@ -20,6 +20,6 @@ public class MapChanger {
     }
 
     public static void changeMap() {
-
+        //-
     }
 }

@@ -37,9 +37,12 @@ public class Main extends JavaPlugin {
         ConfigAPI.checkEntry("Settings.MySQL.Database","KnockIT",ConfigAPI.Config,ConfigAPI.CFG);
         ConfigAPI.checkEntry("Settings.MySQL.Username","username",ConfigAPI.Config,ConfigAPI.CFG);
         ConfigAPI.checkEntry("Settings.MySQL.Password","password",ConfigAPI.Config,ConfigAPI.CFG);
-        ConfigAPI.checkEntry("Messages.JoinMessage","&8>> &9%player% &7joined the server&8.",ConfigAPI.Messages,ConfigAPI.MSG);
-        ConfigAPI.checkEntry("Messages.QuitMessage","&8>> &9%player% &7left the server&8.",ConfigAPI.Messages,ConfigAPI.MSG);
-        ConfigAPI.checkEntry("Messages.NoPermissions","&8>> &cYou aren't allowed to do that&8.",ConfigAPI.Messages,ConfigAPI.MSG);
+        ConfigAPI.checkEntry("Settings.MessageSounds.enable",false,ConfigAPI.Config,ConfigAPI.CFG);
+        ConfigAPI.checkEntry("Messages.General.Prefix","&9KnockIT &8>> &7",ConfigAPI.Messages,ConfigAPI.MSG);
+        ConfigAPI.checkEntry("Messages.General.JoinMessage","&8>> &9%player% &7joined the server&8.",ConfigAPI.Messages,ConfigAPI.MSG);
+        ConfigAPI.checkEntry("Messages.General.QuitMessage","&8>> &9%player% &7left the server&8.",ConfigAPI.Messages,ConfigAPI.MSG);
+        ConfigAPI.checkEntry("Messages.General.NoPermissions","&8>> &cYou aren't allowed to do this&8.",ConfigAPI.Messages,ConfigAPI.MSG);
+        ConfigAPI.checkEntry("Messages.ConsolePlayerError","&8>> &cYou need to be a player to do this&8.",ConfigAPI.Messages,ConfigAPI.MSG);
     }
 
     void initMySQL() {

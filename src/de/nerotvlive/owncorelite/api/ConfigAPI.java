@@ -8,6 +8,7 @@ import java.io.IOException;
 public class ConfigAPI {
 
     //OWNCORELITE VERSION: BETA 1.0.0
+    //AUTHOR: NEROTVLIVE
 
     public static File Config = new File("plugins/KnockIT/config.yml");
     public static YamlConfiguration CFG = YamlConfiguration.loadConfiguration(Config);

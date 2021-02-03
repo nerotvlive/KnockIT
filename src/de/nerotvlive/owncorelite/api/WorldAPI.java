@@ -8,6 +8,7 @@ import org.bukkit.entity.Player;
 public class WorldAPI {
 
     //OWNCORELITE VERSION: BETA 1.0.0
+    //AUTHOR: NEROTVLIVE
 
     public static World getPlayerWorld(Player player) {
         ServerAPI.sendDebugMessage("Trying to get world of "+player.getUniqueId()+" ("+player.getName()+")");
