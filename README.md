@@ -1,5 +1,5 @@
 #This is KnockIT
-* ###Features
+* <strong>Features</strong>
   * Mapchange
   * Kits
   * Local Storage OR MySQL
