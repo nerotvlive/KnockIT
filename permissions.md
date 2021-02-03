@@ -1,3 +1,3 @@
-#Permissions
-* ###Commands
+# Permissions #
+* ### Commands ###
   * /setspawn - knockit.setspawn
